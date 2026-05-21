@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-app
+  template:
+    metadata:
+      labels:
+        app: weather-app
+    spec:
+      containers:
+        - name: weather-app
+          image: weather-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: OPENWEATHER_API_KEY
+              value: "OPENWEATHER_API_KEY"
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: "host.docker.internal:9093"
+            - name: SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS
+              value: "host.docker.internal:9093"
+            - name: SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS
+              value: "host.docker.internal:9093"
+
+            - name: ELASTICSEARCH_HOST
+              value: "host.docker.internal"
+            - name: ELASTICSEARCH_PORT
+              value: "9200"

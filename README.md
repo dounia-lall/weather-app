@@ -60,11 +60,11 @@ Kibana Dashboard
 
 Le dashboard Kibana permet de visualiser :
 
-- 🌡️ Température moyenne
-- 💧 Humidité moyenne
+- 🌡️ Température moyenne des villes
+- 💧 Humidité moyenne des villes
 - 📈 Évolution météo en temps réel
 - 🌍 Répartition des événements par région
-- 📡 KPI des événements météo traités
+- 📡 Nombre d’événements météo traités
 - 📋 Tableau temps réel des données météo
 
 weather-app/
@@ -80,7 +80,7 @@ weather-app/
 ├── pom.xml
 └── README.md
 
-🐳 Lancer le projet en local*
+🐳 Lancer le projet en local
 
 1️⃣ Cloner le projet
 git clone https://github.com/dounia-lall/weather-app.git
@@ -133,6 +133,4 @@ Apache Kafka
 Dounia Lallouche
 
 ⭐ À propos
-Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS.
-
 Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS.

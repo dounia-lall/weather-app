@@ -10,7 +10,7 @@ L’infrastructure Kafka, Elasticsearch et Kibana est déployée avec Docker Com
 
 ---
 
-# 🚀 Technologies utilisées
+## 🚀 Technologies utilisées
 
 - Java 21
 - Spring Boot
@@ -25,9 +25,9 @@ L’infrastructure Kafka, Elasticsearch et Kibana est déployée avec Docker Com
 
 ---
 
-# 🏗️ Architecture du projet
+## 🏗️ Architecture du projet
 
-```
+```text
 OpenWeather API
         ↓
 Spring Boot Producer
@@ -39,8 +39,9 @@ Spring Boot Consumer
 Elasticsearch
         ↓
 Kibana Dashboard
-
 ```
+
+---
 
 ## ⚙️ Fonctionnalités
 
@@ -69,6 +70,11 @@ Le dashboard Kibana permet de visualiser :
 - 📡 Nombre d’événements météo traités
 - 📋 Tableau temps réel des données météo
 
+---
+
+## 📂 Structure du projet
+
+```text
 weather-app/
 │
 ├── src/
@@ -81,58 +87,104 @@ weather-app/
 ├── Dockerfile
 ├── pom.xml
 └── README.md
+```
 
-🐳 Lancer le projet en local
+---
 
-1️⃣ Cloner le projet
+## 🐳 Lancer le projet en local
+
+### 1️⃣ Cloner le projet
+
+```bash
 git clone https://github.com/dounia-lall/weather-app.git
 cd weather-app
+```
 
-2️⃣ Démarrer l’infrastructure Docker
+### 2️⃣ Démarrer l’infrastructure Docker
+
+```bash
 docker-compose up -d
+```
 
 Services démarrés :
 
-Kafka
-Elasticsearch
-Kibana
+- Kafka
+- Elasticsearch
+- Kibana
 
-3️⃣ Construire l’application Spring Boot
+### 3️⃣ Construire l’application Spring Boot
+
+```bash
 ./mvnw clean package -DskipTests
+```
 
-4️⃣ Construire l’image Docker
+### 4️⃣ Construire l’image Docker
+
+```bash
 docker build -t weather-app .
+```
 
-☸️ Déploiement Kubernetes
+---
+
+## ☸️ Déploiement Kubernetes
 
 Déployer l’application avec Kubernetes :
+
+```bash
 kubectl apply -f k8s/weather-deployment.yaml
 kubectl apply -f k8s/weather-service.yaml
+```
 
 Vérifier les pods :
+
+```bash
 kubectl get pods
+```
 
 Vérifier les services :
+
+```bash
 kubectl get services
+```
 
-📡 Tester l’API
+---
+
+## 📡 Tester l’API
+
+```bash
 curl -X POST http://localhost:30080/weather/Paris
+```
 
-📊 Accès Kibana
+---
+
+## 📊 Accès Kibana
+
+```text
 http://localhost:5601
+```
 
-☁️ Déploiement AWS
+---
+
+## ☁️ Déploiement AWS
 
 Le projet est déployé sur une instance AWS EC2 Ubuntu avec :
 
-Docker
-Kubernetes
-Elasticsearch
-Kibana
-Apache Kafka
+- Docker
+- Kubernetes
+- Elasticsearch
+- Kibana
+- Apache Kafka
 
-👩‍💻 Auteur
+---
+
+## 👩‍💻 Auteur
+
 Dounia Lallouche
 
-⭐ À propos
+GitHub : https://github.com/dounia-lall
+
+---
+
+## ⭐ À propos
+
 Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS.

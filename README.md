@@ -40,6 +40,8 @@ Elasticsearch
         ↓
 Kibana Dashboard
 
+```
+
 ## ⚙️ Fonctionnalités
 
 ✅ Streaming météo temps réel  

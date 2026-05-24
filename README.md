@@ -28,7 +28,7 @@ L’infrastructure Kafka, Elasticsearch et Kibana est déployée avec Docker Com
 
 ## 🏗️ Architecture du projet
 
-```
+```text
 OpenWeather API
         ↓
 Spring Boot Producer
@@ -151,16 +151,11 @@ Vérifier les services :
 
 ```bash
 kubectl get services
-<<<<<<< HEAD
-
-☁️ Déploiement AWS EC2
-=======
 ```
 
 ---
 
 ## ☁️ Déploiement AWS EC2
->>>>>>> d1938f0 (Fix README formatting and screenshots display)
 
 Le projet a été déployé sur une instance AWS EC2 Ubuntu.
 
@@ -227,15 +222,8 @@ http://localhost:5601
 
 **Dounia Lallouche**
 
-GitHub : [dounia-lall](https://github.com/dounia-lall)
-
 ---
 
 ## ⭐ À propos
 
-<<<<<<< HEAD
-⭐ À propos
 Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS EC2.
-=======
-Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS EC2.
->>>>>>> d1938f0 (Fix README formatting and screenshots display)

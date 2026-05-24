@@ -120,6 +120,7 @@ kubectl get pods
 Vérifier les services :
 
 kubectl get services
+
 ☁️ Déploiement AWS EC2
 
 Le projet a été déployé sur une instance AWS EC2 Ubuntu.

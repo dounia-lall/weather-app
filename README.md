@@ -28,7 +28,7 @@ L’infrastructure Kafka, Elasticsearch et Kibana est déployée avec Docker Com
 
 ## 🏗️ Architecture du projet
 
-```text
+```
 OpenWeather API
         ↓
 Spring Boot Producer
@@ -40,6 +40,7 @@ Spring Boot Consumer
 Elasticsearch
         ↓
 Kibana Dashboard
+```
 
 ⚙️ Fonctionnalités
 

@@ -42,31 +42,40 @@ Elasticsearch
 Kibana Dashboard
 ```
 
-⚙️ Fonctionnalités
+---
 
-✅ Streaming météo temps réel
-✅ Architecture Producer / Consumer Kafka
-✅ Transmission des données avec Apache Kafka
-✅ Indexation des données dans Elasticsearch
-✅ Visualisation des données avec Kibana
-✅ Conteneurisation avec Docker
-✅ Déploiement de l’application avec Kubernetes
-✅ Déploiement cloud sur AWS EC2
-✅ Monitoring et analyse des données météo
+## ⚙️ Fonctionnalités
 
-📊 Dashboard Kibana
+- ✅ Streaming météo temps réel
+- ✅ Architecture Producer / Consumer Kafka
+- ✅ Transmission des données avec Apache Kafka
+- ✅ Indexation des données dans Elasticsearch
+- ✅ Visualisation des données avec Kibana
+- ✅ Conteneurisation avec Docker
+- ✅ Déploiement de l’application avec Kubernetes
+- ✅ Déploiement cloud sur AWS EC2
+- ✅ Monitoring et analyse des données météo
+
+---
+
+## 📊 Dashboard Kibana
 
 Le dashboard Kibana permet de visualiser :
 
-🌡️ Température moyenne des villes
-💧 Humidité moyenne des villes
-📈 Évolution météo en temps réel
-🌍 Répartition des événements par région
-📡 Nombre d’événements météo traités
-📋 Tableau temps réel des données météo
+- 🌡️ Température moyenne des villes
+- 💧 Humidité moyenne des villes
+- 📈 Évolution météo en temps réel
+- 🌍 Répartition des événements par région
+- 📡 Nombre d’événements météo traités
+- 📋 Tableau temps réel des données météo
 
-📂 Structure du projet
+![Dashboard Kibana](screenshots/dashboard-kibana.png)
 
+---
+
+## 📂 Structure du projet
+
+```text
 weather-app/
 │
 ├── src/
@@ -84,53 +93,85 @@ weather-app/
 ├── Dockerfile
 ├── pom.xml
 └── README.md
+```
 
-🐳 Lancer le projet en local
+---
 
-1️⃣ Cloner le projet
+## 🐳 Lancer le projet en local
+
+### 1️⃣ Cloner le projet
+
+```bash
 git clone https://github.com/dounia-lall/weather-app.git
 cd weather-app
+```
 
-2️⃣ Démarrer l’infrastructure Docker
+### 2️⃣ Démarrer l’infrastructure Docker
+
+```bash
 docker-compose up -d
+```
 
 Services démarrés :
 
-Kafka
-Elasticsearch
-Kibana
+- Kafka
+- Elasticsearch
+- Kibana
 
-3️⃣ Construire l’application Spring Boot
+### 3️⃣ Construire l’application Spring Boot
+
+```bash
 ./mvnw clean package -DskipTests
+```
 
-4️⃣ Construire l’image Docker
+### 4️⃣ Construire l’image Docker
+
+```bash
 docker build -t weather-app .
+```
 
-☸️ Déploiement Kubernetes
+---
+
+## ☸️ Déploiement Kubernetes
 
 Déployer l’application avec Kubernetes :
 
+```bash
 kubectl apply -f k8s/weather-deployment.yaml
 kubectl apply -f k8s/weather-service.yaml
+```
 
 Vérifier les pods :
 
+```bash
 kubectl get pods
+```
 
 Vérifier les services :
 
+```bash
 kubectl get services
+<<<<<<< HEAD
 
 ☁️ Déploiement AWS EC2
+=======
+```
+
+---
+
+## ☁️ Déploiement AWS EC2
+>>>>>>> d1938f0 (Fix README formatting and screenshots display)
 
 Le projet a été déployé sur une instance AWS EC2 Ubuntu.
 
 L’environnement de déploiement utilise :
 
-AWS EC2 comme serveur cloud
-Docker pour lancer Kafka, Elasticsearch, Kibana et l’application Spring Boot
-Kubernetes pour orchestrer l’application Spring Boot
-Kibana pour visualiser les données météo indexées dans Elasticsearch
+- AWS EC2 comme serveur cloud
+- Docker pour lancer Kafka, Elasticsearch, Kibana et l’application Spring Boot
+- Kubernetes pour orchestrer l’application Spring Boot
+- Kibana pour visualiser les données météo indexées dans Elasticsearch
+
+---
 
 ## 📸 Captures du déploiement
 
@@ -164,14 +205,37 @@ L’application Spring Boot est déployée avec Kubernetes. Le pod `weather-app`
 
 ![Pod Kubernetes](screenshots/kubernetes-pod-running.png)
 
-📡 Tester l’API
+---
+
+## 📡 Tester l’API
+
+```bash
 curl -X POST http://localhost:30080/weather/Paris
+```
 
-📊 Accès Kibana
+---
+
+## 📊 Accès Kibana
+
+```text
 http://localhost:5601
+```
 
-👩‍💻 Auteur
-Dounia Lallouche
+---
 
+## 👩‍💻 Auteur
+
+**Dounia Lallouche**
+
+GitHub : [dounia-lall](https://github.com/dounia-lall)
+
+---
+
+## ⭐ À propos
+
+<<<<<<< HEAD
 ⭐ À propos
 Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS EC2.
+=======
+Application de streaming météo temps réel utilisant Spring Boot, Kafka, Elasticsearch, Kibana, Docker, Kubernetes et AWS EC2.
+>>>>>>> d1938f0 (Fix README formatting and screenshots display)

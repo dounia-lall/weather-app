@@ -24,7 +24,8 @@ L’infrastructure Kafka, Elasticsearch et Kibana est déployée avec Docker Com
 - Maven
 - OpenWeather API
 
----
+
+```markdown
 
 ## 🏗️ Architecture du projet
 

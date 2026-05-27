@@ -141,21 +141,36 @@ L’application Spring Boot est conteneurisée avec Docker, puis déployée avec
 Les données météo sont récupérées depuis l’API OpenWeather, envoyées dans Kafka, traitées par Spring Boot, indexées dans Elasticsearch, puis visualisées dans Kibana.
 
 📸 Captures du déploiement
-Instance AWS EC2 en cours d’exécution
 
-Le projet est déployé sur une instance AWS EC2 Ubuntu nommée weather-kafka-server.
+### Instance AWS EC2 en cours d’exécution
 
-Dashboard Kibana
+Le projet est déployé sur une instance AWS EC2 Ubuntu nommée `weather-kafka-server`.
+
+![Instance AWS EC2](screenshots/aws-ec2-instance-running.png)
+
+---
+
+### Dashboard Kibana
 
 Visualisation des données météo dans Kibana.
 
-Services Docker actifs
+![Dashboard Kibana](screenshots/dashboard-kibana.png)
+
+---
+
+### Services Docker actifs
 
 Kafka, Elasticsearch et Kibana sont lancés avec Docker Compose sur l’instance AWS EC2.
 
-Pod Kubernetes en cours d’exécution
+![Services Docker](screenshots/docker-containers-running.png)
 
-L’application Spring Boot est déployée avec Kubernetes. Le pod weather-app est en état Running.
+---
+
+### Pod Kubernetes en cours d’exécution
+
+L’application Spring Boot est déployée avec Kubernetes. Le pod `weather-app` est en état `Running`.
+
+![Pod Kubernetes](screenshots/kubernetes-pod-running.png)
 
 📡 Tester l’API
 curl -X POST http://localhost:30080/weather/Paris
